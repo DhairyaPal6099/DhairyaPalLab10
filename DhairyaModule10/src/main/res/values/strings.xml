@@ -9,10 +9,17 @@
     <string name="splash_screen_text2" translatable="false">by Dhairya Pal N01576099 \u00A9</string>
     <string name="download_image">Download Image</string>
     <string name="full_name_studentid" translatable="false">Dhairya Pal N01576099</string>
+    <string name="error" translatable="false">"Error: "</string>
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>
         <item>Pterodactyl</item>
         <item>Mosasaurus</item>
+    </string-array>
+    <string-array name="spinner_urls">
+        <item>https://th.bing.com/th/id/OIP.gJxBw1ag8Sjts3jwA-6hPQHaEK?rs=1&amp;pid=ImgDetMain</item>
+        <item>https://th.bing.com/th/id/OIP.tWwVMYghAk-MK3GthH0odAHaE7?w=284&amp;h=189&amp;c=7&amp;r=0&amp;o=5&amp;dpr=1.3&amp;pid=1.7</item>
+        <item>https://cdn.mos.cms.futurecdn.net/6vA8wWskCkUgffN9dbQhvh-1200-80.jpg</item>
+        <item>https://www.jurassicworlduniverse.com/wordpress/wp-content/uploads/2014/11/mosasaurus3.jpg</item>
     </string-array>
 </resources>
