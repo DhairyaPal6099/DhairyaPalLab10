@@ -12,7 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import dhairya.pal.n01576099.dp.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class PalActivity10 extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
