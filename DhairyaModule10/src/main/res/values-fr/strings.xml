@@ -3,6 +3,11 @@
 <!-- Dhairya Pal N01576099 -->
 
 <resources>
-
     <string name="download_image">Download Image</string>
+    <string-array name="spinner_items">
+        <item>Salamandre</item>
+        <item>Dragon de Komodo</item>
+        <item>Ptérodactyle</item>
+        <item>Mosasaurus</item>
+    </string-array>
 </resources>

@@ -1,12 +1,18 @@
 <!-- Dhairya Pal N01576099 -->
 
 <resources>
-    <string name="app_name">DhairyaLab10</string>
-    <string name="title_dh1airya">Dh1airya</string>
-    <string name="title_pa2l">Pa2l</string>
-    <string name="title_n013576099">N013576099</string>
-    <string name="title_d4p">D4P</string>
-    <string name="splash_screen_text2">by Dhairya Pal N01576099 \u00A9</string>
+    <string name="app_name" translatable="false">DhairyaLab10</string>
+    <string name="title_dh1airya" translatable="false">Dh1airya</string>
+    <string name="title_pa2l" translatable="false">Pa2l</string>
+    <string name="title_n013576099" translatable="false">N013576099</string>
+    <string name="title_d4p" translatable="false">D4P</string>
+    <string name="splash_screen_text2" translatable="false">by Dhairya Pal N01576099 \u00A9</string>
     <string name="download_image">Download Image</string>
-    <string name="full_name_studentid">Dhairya Pal N01576099</string>
+    <string name="full_name_studentid" translatable="false">Dhairya Pal N01576099</string>
+    <string-array name="spinner_items">
+        <item>Salamander</item>
+        <item>Komodo Dragon</item>
+        <item>Pterodactyl</item>
+        <item>Mosasaurus</item>
+    </string-array>
 </resources>
