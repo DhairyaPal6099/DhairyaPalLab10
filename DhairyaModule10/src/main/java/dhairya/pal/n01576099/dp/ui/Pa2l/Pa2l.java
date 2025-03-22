@@ -2,6 +2,7 @@
 
 package dhairya.pal.n01576099.dp.ui.Pa2l;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -60,7 +61,7 @@ public class Pa2l extends Fragment {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt(getString(R.string.sharedprefskey_temperature_scale), radioGroup1.getCheckedRadioButtonId());
             editor.apply();
-            if (!binding.dhaSpinnerCities.getSelectedItem().toString().equals("Select city")) {
+            if (!binding.dhaSpinnerCities.getSelectedItem().toString().equals(getString(R.string.select_city))) {
                 requestWeatherData(binding.dhaSpinnerCities.getSelectedItem().toString());
             }
         });
@@ -103,7 +104,7 @@ public class Pa2l extends Fragment {
     }
 
     public void requestWeatherData(String cityName) {
-        String url = "https://api.openweathermap.org/data/2.5/weather?lat=" + cities.get(cityName).toString().split(",", 2)[0] + "&lon=" + cities.get(cityName).toString().split(",", 2)[1] + "&appid=8ef836d081193156bf276a31f6eae6d9";
+        String url = getString(R.string.OpenWeatherURL_part1) + cities.get(cityName).toString().split(getString(R.string.comma), 2)[0] + getString(R.string.OpenWeatherURL_part2) + cities.get(cityName).toString().split(getString(R.string.comma), 2)[1] + getString(R.string.OpenWeatherURL_part3);
 
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
@@ -113,9 +114,10 @@ public class Pa2l extends Fragment {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                Toast.makeText(getContext(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), getString(R.string.error_colon) + e.getMessage(), Toast.LENGTH_LONG).show();
             }
 
+            @SuppressLint("StringFormatMatches")
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 if (response.isSuccessful()) {
@@ -123,38 +125,38 @@ public class Pa2l extends Fragment {
                         JSONObject jsonObject = new JSONObject(response.body().string());
 
                         //Setting the city
-                        binding.dhaTextViewCity.setText(String.format("City: %s", cityName));
+                        binding.dhaTextViewCity.setText(String.format(getString(R.string.city_placeholderString), cityName));
 
                         //Getting and setting the temperature
-                        JSONObject main = (JSONObject) jsonObject.get("main");
-                        double temperature = (double) main.get("temp");
+                        JSONObject main = (JSONObject) jsonObject.get(getString(R.string.main));
+                        double temperature = (double) main.get(getString(R.string.temp));
                         if (radioGroup.getCheckedRadioButtonId() == R.id.dhaCelsiusRadioButton) {
                             temperature -= 273.15;
-                            binding.dhaTextViewTemperature.setText(String.format("Temperature: %.1f\u00B0C", temperature));
+                            binding.dhaTextViewTemperature.setText(String.format(getString(R.string.temperature_placeholderFloat_c), temperature));
                         } else {
                             temperature = (temperature - 273.15)*9/5 + 32;
-                            binding.dhaTextViewTemperature.setText(String.format("Temperature: %.1f\u00B0F", temperature));
+                            binding.dhaTextViewTemperature.setText(String.format(getString(R.string.temperature_placeholderFloat_f), temperature));
                         }
-                        binding.dhaTextViewHumidity.setText(String.format("Humidity: %d%%", main.get("humidity")));
+                        binding.dhaTextViewHumidity.setText(String.format(getString(R.string.humidity_placeholderInt), main.get(getString(R.string.humidity))));
 
                         //Getting and setting the coordinates
-                        JSONObject coord = (JSONObject) jsonObject.get("coord");
-                        binding.dhaTextViewLongitude.setText(String.format("Lon: %.4f", coord.get("lon")));
-                        binding.dhaTextViewLatitude.setText(String.format("Lat: %.4f", coord.get("lat")));
+                        JSONObject coord = (JSONObject) jsonObject.get(getString(R.string.coord));
+                        binding.dhaTextViewLongitude.setText(String.format(getString(R.string.lon_placeholderFloat), coord.get(getString(R.string.lon))));
+                        binding.dhaTextViewLatitude.setText(String.format(getString(R.string.lat_placeholderFloat), coord.get(getString(R.string.lat))));
 
                         //Getting and setting the country
-                        JSONObject sys = (JSONObject) jsonObject.get("sys");
-                        binding.dhaTextViewCountry.setText(String.format("Country: %s", sys.get("country")));
+                        JSONObject sys = (JSONObject) jsonObject.get(getString(R.string.sys));
+                        binding.dhaTextViewCountry.setText(String.format(getString(R.string.country_placeholderString), sys.get(getString(R.string.country))));
 
                         //Getting and setting the description
-                        JSONArray weather = jsonObject.getJSONArray("weather");
-                        binding.dhaTextViewDescription.setText(String.format("Desc: %s", weather.getJSONObject(0).get("description")));
+                        JSONArray weather = jsonObject.getJSONArray(getString(R.string.weather));
+                        binding.dhaTextViewDescription.setText(String.format(getString(R.string.desc_placeholderString), weather.getJSONObject(0).get(getString(R.string.description))));
 
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
                 } else {
-                    Toast.makeText(getContext(), "Error code: " + response.code() + "\n" + response.message(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), getString(R.string.error_code_colon) + response.code() + getString(R.string.newline) + response.message(), Toast.LENGTH_LONG).show();
                 }
             }
         });

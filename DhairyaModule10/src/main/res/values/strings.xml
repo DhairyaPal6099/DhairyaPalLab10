@@ -13,9 +13,35 @@
     <string name="celsius" translatable="false">Celsius</string>
     <string name="fahrenheit" translatable="false">Fahrenheit</string>
     <string name="student_id" translatable="false">N01576099</string>
-    <string name="shared_preferences">shared preferences</string>
-    <string name="sharedprefskey_temperature_scale">temperature_scale</string>
-    <string name="empty_string" />
+    <string name="shared_preferences" translatable="false">shared preferences</string>
+    <string name="sharedprefskey_temperature_scale" translatable="false">temperature_scale</string>
+    <string name="empty_string" translatable="false" />
+    <string name="select_city" translatable="false">Select city</string>
+    <string name="OpenWeatherURL_part1" translatable="false">https://api.openweathermap.org/data/2.5/weather?lat=</string>
+    <string name="comma" translatable="false">,</string>
+    <string name="OpenWeatherURL_part2" translatable="false"><![CDATA[&lon=]]></string>
+    <string name="OpenWeatherURL_part3" translatable="false"><![CDATA[&appid=8ef836d081193156bf276a31f6eae6d9]]></string>
+    <string name="error_colon" translatable="false">"Error: "</string>
+    <string name="city_placeholderString" translatable="false">City: %s</string>
+    <string name="main" translatable="false">main</string>
+    <string name="temp" translatable="false">temp</string>
+    <string name="temperature_placeholderFloat_c" translatable="false">Temperature: %.1f°C</string>
+    <string name="temperature_placeholderFloat_f" translatable="false">Temperature: %.1f°F</string>
+    <string name="humidity_placeholderInt" translatable="false">Humidity: %d%%</string>
+    <string name="humidity" translatable="false">humidity</string>
+    <string name="coord" translatable="false">coord</string>
+    <string name="lon_placeholderFloat" translatable="false">Lon: %.4f</string>
+    <string name="lat_placeholderFloat" translatable="false">Lat: %.4f</string>
+    <string name="sys" translatable="false">sys</string>
+    <string name="country_placeholderString" translatable="false">Country: %s</string>
+    <string name="country" translatable="false">country</string>
+    <string name="lon" translatable="false">lon</string>
+    <string name="lat" translatable="false">lat</string>
+    <string name="weather" translatable="false">weather</string>
+    <string name="desc_placeholderString" translatable="false">Desc: %s</string>
+    <string name="description" translatable="false">description</string>
+    <string name="error_code_colon" translatable="false">"Error code: "</string>
+    <string name="newline" translatable="false">\n</string>
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>
