@@ -1,3 +1,5 @@
+// Dhairya Pal N01576099
+
 package dhairya.pal.n01576099.dp.ui.Dh1airya;
 
 import android.os.Bundle;
@@ -13,19 +15,14 @@ import androidx.lifecycle.ViewModelProvider;
 import dhairya.pal.n01576099.dp.databinding.FragmentHomeBinding;
 
 public class Dh1airya extends Fragment {
-
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        Dh1airyaViewModel dh1airyaViewModel =
-                new ViewModelProvider(this).get(Dh1airyaViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        dh1airyaViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
