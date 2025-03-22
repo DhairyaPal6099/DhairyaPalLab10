@@ -2,8 +2,9 @@
 
 <resources>
     <string name="app_name">DhairyaLab10</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dh1airya">Dh1airya</string>
+    <string name="title_pa2l">Pa2l</string>
+    <string name="title_n013576099">N013576099</string>
+    <string name="title_d4p">D4P</string>
     <string name="splash_screen_text2">by Dhairya Pal N01576099 \u00A9</string>
 </resources>

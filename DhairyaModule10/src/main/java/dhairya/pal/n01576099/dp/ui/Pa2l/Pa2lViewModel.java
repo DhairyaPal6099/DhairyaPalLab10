@@ -1,16 +1,16 @@
-package dhairya.pal.n01576099.dp.ui.home;
+package dhairya.pal.n01576099.dp.ui.Pa2l;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class Pa2lViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public Pa2lViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is Pa2l fragment");
     }
 
     public LiveData<String> getText() {

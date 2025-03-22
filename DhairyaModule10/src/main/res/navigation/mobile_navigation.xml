@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/dha_navigation_dh1airya">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="dhairya.pal.n01576099.dp.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:id="@+id/dha_navigation_dh1airya"
+        android:name="dhairya.pal.n01576099.dp.ui.Dh1airya.Dh1airya"
+        android:label="@string/title_dh1airya"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="dhairya.pal.n01576099.dp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:id="@+id/dha_navigation_pa2l"
+        android:name="dhairya.pal.n01576099.dp.ui.Pa2l.Pa2l"
+        android:label="@string/title_pa2l"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="dhairya.pal.n01576099.dp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:id="@+id/dha_navigation_n013576099"
+        android:name="dhairya.pal.n01576099.dp.ui.N013576099.N013576099"
+        android:label="@string/title_n013576099"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/dha_navigation_d4p"
+        android:name="dhairya.pal.n01576099.dp.ui.D4P.D4P"
+        android:label="@string/title_d4p"
+        tools:layout="@layout/fragment_d4p" />
 </navigation>

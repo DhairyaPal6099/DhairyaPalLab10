@@ -1,16 +1,16 @@
-package dhairya.pal.n01576099.dp.ui.notifications;
+package dhairya.pal.n01576099.dp.ui.Dh1airya;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class Dh1airyaViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public Dh1airyaViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is Dh1airya fragment");
     }
 
     public LiveData<String> getText() {
