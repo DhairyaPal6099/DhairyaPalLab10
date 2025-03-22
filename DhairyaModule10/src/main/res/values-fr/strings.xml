@@ -4,4 +4,5 @@
 
 <resources>
 
+    <string name="download_image">Download Image</string>
 </resources>

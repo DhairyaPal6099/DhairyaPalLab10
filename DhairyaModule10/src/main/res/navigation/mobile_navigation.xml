@@ -9,19 +9,19 @@
         android:id="@+id/dha_navigation_dh1airya"
         android:name="dhairya.pal.n01576099.dp.ui.Dh1airya.Dh1airya"
         android:label="@string/title_dh1airya"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_dh1airya" />
 
     <fragment
         android:id="@+id/dha_navigation_pa2l"
         android:name="dhairya.pal.n01576099.dp.ui.Pa2l.Pa2l"
         android:label="@string/title_pa2l"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_pa2l" />
 
     <fragment
         android:id="@+id/dha_navigation_n013576099"
         android:name="dhairya.pal.n01576099.dp.ui.N013576099.N013576099"
         android:label="@string/title_n013576099"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_n013576099" />
 
     <fragment
         android:id="@+id/dha_navigation_d4p"

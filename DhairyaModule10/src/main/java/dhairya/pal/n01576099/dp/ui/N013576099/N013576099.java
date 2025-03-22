@@ -10,15 +10,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import dhairya.pal.n01576099.dp.databinding.FragmentNotificationsBinding;
+import dhairya.pal.n01576099.dp.databinding.FragmentN013576099Binding;
 
 public class N013576099 extends Fragment {
-    private FragmentNotificationsBinding binding;
+    private FragmentN013576099Binding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentN013576099Binding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         return root;

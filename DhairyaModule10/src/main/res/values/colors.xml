@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash_blue">#A0D9E7</color>
-    <color name="faintPink">#FEF6FE</color>
+    <color name="faintPink">#FDE3FD</color>
+    <color name="darkRed">#5F0339</color>
 </resources>

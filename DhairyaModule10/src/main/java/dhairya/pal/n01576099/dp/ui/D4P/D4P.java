@@ -11,15 +11,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import dhairya.pal.n01576099.dp.databinding.FragmentNotificationsBinding;
+import dhairya.pal.n01576099.dp.databinding.FragmentD4pBinding;
 
 public class D4P extends Fragment {
-    private FragmentNotificationsBinding binding;
+    private FragmentD4pBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentD4pBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         return root;
