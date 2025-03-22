@@ -13,6 +13,8 @@
     <string name="celsius" translatable="false">Celsius</string>
     <string name="fahrenheit" translatable="false">Fahrenheit</string>
     <string name="student_id" translatable="false">N01576099</string>
+    <string name="shared_preferences">shared preferences</string>
+    <string name="sharedprefskey_temperature_scale">temperature_scale</string>
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>
