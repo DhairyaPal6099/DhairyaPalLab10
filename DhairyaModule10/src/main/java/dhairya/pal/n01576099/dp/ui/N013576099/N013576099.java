@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -25,6 +26,7 @@ public class N013576099 extends Fragment {
 
     private RecyclerView itemRV;
 
+    private WebView webView;
     private ArrayList<ItemModel> itemModelArrayList = new ArrayList<>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -33,12 +35,20 @@ public class N013576099 extends Fragment {
         binding = FragmentN013576099Binding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        itemModelArrayList.add(new ItemModel("Video Title 1", R.drawable.video_icon));
-        itemModelArrayList.add(new ItemModel("Video Title 2", R.drawable.video_icon));
-        itemModelArrayList.add(new ItemModel("Video Title 3", R.drawable.video_icon));
+        for (int i = 0; i < 3; i++) {
+            itemModelArrayList.add(new ItemModel(getResources().getStringArray(R.array.webview_videos)[i], R.drawable.video_icon));
+        }
 
         itemRV = binding.dhaRecyclerView;
-        adapter = new ItemModelAdapter(itemModelArrayList, getContext());
+        adapter = new ItemModelAdapter(itemModelArrayList, getContext(), position -> {
+            webView = binding.dhaWebView;
+            webView.getSettings().setJavaScriptEnabled(true);
+            String url = getResources().getStringArray(R.array.webview_video_urls)[position];
+            String html = getString(R.string.html_body_part1) +
+                    getString(R.string.html_body_part2) + url + getString(R.string.html_body_part3) +
+                    getString(R.string.html_body_part4);
+            webView.loadData(html, getString(R.string.text_html), getString(R.string.utf_8));
+        });
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         itemRV.setHasFixedSize(true);
         itemRV.setLayoutManager(manager);

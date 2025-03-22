@@ -18,9 +18,16 @@ public class ItemModelAdapter extends RecyclerView.Adapter<ItemModelAdapter.View
     private ArrayList<ItemModel> itemModelArrayList;
     private Context context;
 
-    public ItemModelAdapter(ArrayList<ItemModel> itemModelArrayList, Context context) {
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    private OnItemClickListener listener;
+
+    public ItemModelAdapter(ArrayList<ItemModel> itemModelArrayList, Context context, OnItemClickListener listener) {
         this.itemModelArrayList = itemModelArrayList;
         this.context = context;
+        this.listener = listener;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -31,6 +38,12 @@ public class ItemModelAdapter extends RecyclerView.Adapter<ItemModelAdapter.View
 
             videoTitle = itemView.findViewById(R.id.dhaTextViewVideoTitle);
             videoIcon = itemView.findViewById(R.id.dhaImageViewVideoIcon);
+
+            itemView.setOnClickListener(view -> {
+                if (listener != null) {
+                    listener.onItemClick(getAdapterPosition());
+                }
+            });
         }
     }
 
