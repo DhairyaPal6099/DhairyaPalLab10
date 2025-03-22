@@ -15,6 +15,7 @@
     <string name="student_id" translatable="false">N01576099</string>
     <string name="shared_preferences">shared preferences</string>
     <string name="sharedprefskey_temperature_scale">temperature_scale</string>
+    <string name="empty_string" />
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>
@@ -28,7 +29,7 @@
         <item>https://www.jurassicworlduniverse.com/wordpress/wp-content/uploads/2014/11/mosasaurus3.jpg</item>
     </string-array>
     <string-array name="spinner_cities">
-        <item>Select City</item>
+        <item>Select city</item>
         <item>Toronto</item>
         <item>Paris</item>
         <item>Rome</item>
@@ -37,10 +38,10 @@
     </string-array>
     <string-array name="spinner_cities_lat_lon">
         <item></item>
-        <item>43.651070, -79.347015</item>
-        <item>48.856613, 2.352222</item>
-        <item>41.902782, 12.496366</item>
-        <item>28.613939, 77.209021</item>
-        <item>55.755825, 37.617298</item>
+        <item>43.651070,-79.347015</item>
+        <item>48.856613,2.352222</item>
+        <item>41.902782,12.496366</item>
+        <item>28.613939,77.209021</item>
+        <item>55.755825,37.617298</item>
     </string-array>
 </resources>
