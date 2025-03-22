@@ -46,6 +46,7 @@
     </RadioGroup>
 
     <Spinner
+        android:id="@+id/dhaSpinnerCities"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:entries="@array/spinner_cities"
@@ -54,5 +55,70 @@
         android:layout_marginHorizontal="100dp"
         app:layout_constraintTop_toBottomOf="@id/dhaRadioGroup"
         android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/dhaSpinnerCities"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/dhaTextViewTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/dhaTextViewLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/dhaTextViewLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="7dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/dhaTextViewCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="7dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/dhaTextViewHumidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="7dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/dhaTextViewCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="7dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/dhaTextViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

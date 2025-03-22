@@ -10,4 +10,5 @@
     <color name="splash_blue">#A0D9E7</color>
     <color name="faintPink">#FDE3FD</color>
     <color name="darkRed">#5F0339</color>
+    <color name="red">#FF0000</color>
 </resources>
