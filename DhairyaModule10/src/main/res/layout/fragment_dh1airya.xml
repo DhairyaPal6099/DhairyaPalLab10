@@ -54,4 +54,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dhaButton" />
 
+    <ProgressBar
+        android:id="@+id/dhaProgressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dhaButton"
+        android:layout_marginTop="270dp"
+        android:scaleY="3"
+        android:scaleX="3"
+        android:indeterminateTint="@color/purple_500"
+        android:visibility="gone" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
