@@ -54,6 +54,10 @@
     <string name="dismiss" translatable="false">DISMISS</string>
     <string name="latitude_f_longitude_f" translatable="false">Latitude: %f, Longitude: %f</string>
     <string name="packagee" translatable="false">package</string>
+    <string name="dhairya_pal_location_determined" translatable="false">Dhairya Pal Location Determined</string>
+    <string name="my_channel_id" translatable="false">my_channel_id</string>
+    <string name="location_updates" translatable="false">Location Updates</string>
+    <string name="notifications_for_location_updates" translatable="false">Notifications for location updates</string>
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>

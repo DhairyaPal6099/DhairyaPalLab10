@@ -77,9 +77,9 @@ public class D4P extends Fragment {
         });
 
         //Setting up notification manager and channel
-        NotificationChannelCompat channel = new NotificationChannelCompat.Builder("my_channel_id", NotificationManagerCompat.IMPORTANCE_DEFAULT)
-                .setName("Location Updates")
-                .setDescription("Notifications for location updates")
+        NotificationChannelCompat channel = new NotificationChannelCompat.Builder(getString(R.string.my_channel_id), NotificationManagerCompat.IMPORTANCE_DEFAULT)
+                .setName(getString(R.string.location_updates))
+                .setDescription(getString(R.string.notifications_for_location_updates))
                 .build();
         manager = NotificationManagerCompat.from(getContext());
         manager.createNotificationChannel(channel);
@@ -125,9 +125,9 @@ public class D4P extends Fragment {
             if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                 notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
             } else {
-                builder = new NotificationCompat.Builder(getContext(), "my_channel_id")
+                builder = new NotificationCompat.Builder(getContext(), getString(R.string.my_channel_id))
                         .setSmallIcon(R.drawable.app_logo)
-                        .setContentTitle("Dhairya Pal Location Determined")
+                        .setContentTitle(getString(R.string.dhairya_pal_location_determined))
                         .setContentText(String.format(getString(R.string.latitude_f_longitude_f), latitude, longitude))
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
                 manager.notify(1, builder.build());
