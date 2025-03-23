@@ -5,7 +5,7 @@
 ## Application UI
 
 Splash Screen
-![Screen0] (https://github.com/DhairyaPal6099/DhairyaPalLab10/blob/master/DhairyaModule10/src/main/res/drawable/screenshot_splashscreen.png)
+![Screen0](https://github.com/DhairyaPal6099/DhairyaPalLab10/blob/master/DhairyaModule10/src/main/res/drawable/screenshot_splashscreen.png)
 
 First Screen - When you select Mosasaurus in the spinner, an image of Mosasaurus appears!
-![Screen1] (https://github.com/DhairyaPal6099/DhairyaPalLab10/blob/master/DhairyaModule10/src/main/res/drawable/screenshot_mosasaurus.png)
+![Screen1](https://github.com/DhairyaPal6099/DhairyaPalLab10/blob/master/DhairyaModule10/src/main/res/drawable/screenshot_mosasaurus.png)
