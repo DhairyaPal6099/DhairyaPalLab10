@@ -45,7 +45,6 @@ public class D4P extends Fragment {
     private ActivityResultLauncher<String> notificationPermissionLauncher;
     private NotificationManagerCompat manager;
     private NotificationCompat.Builder builder;
-    private Uri soundUri;
     private int counter;
     private double latitude;
     private double longitude;
@@ -80,12 +79,10 @@ public class D4P extends Fragment {
         });
 
         //Setting up notification manager and channel
-        soundUri = Uri.parse("android:resource://" + getContext().getPackageName() + "/" + R.raw.nt_notificationsound);
-        NotificationChannelCompat channel = new NotificationChannelCompat.Builder(getString(R.string.my_channel_id), NotificationManagerCompat.IMPORTANCE_DEFAULT)
+        NotificationChannelCompat channel = new NotificationChannelCompat.Builder(getString(R.string.my_channel_id), NotificationManagerCompat.IMPORTANCE_HIGH)
                 .setName(getString(R.string.location_updates))
                 .setDescription(getString(R.string.notifications_for_location_updates))
                 .setVibrationEnabled(true)
-                .setSound(soundUri, new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_NOTIFICATION).setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION).build())
                 .build();
         manager = NotificationManagerCompat.from(getContext());
         manager.createNotificationChannel(channel);
@@ -134,9 +131,7 @@ public class D4P extends Fragment {
                 builder = new NotificationCompat.Builder(getContext(), getString(R.string.my_channel_id))
                         .setSmallIcon(R.drawable.app_logo)
                         .setContentTitle(getString(R.string.dhairya_pal_location_determined))
-                        .setContentText(String.format(getString(R.string.latitude_f_longitude_f), latitude, longitude))
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                        .setSound(soundUri);
+                        .setContentText(String.format(getString(R.string.latitude_f_longitude_f), latitude, longitude));
                 manager.notify(1, builder.build());
             }
         }
