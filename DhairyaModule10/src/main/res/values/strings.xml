@@ -48,8 +48,12 @@
     <string name="html_body_part4" translatable="false"><![CDATA[</body></html>]]></string>
     <string name="text_html" translatable="false">text/html</string>
     <string name="utf_8" translatable="false">UTF-8</string>
-    <string name="location_allcaps">LOCATION</string>
-    <string name="full_name_space">"Dhairya Pal "</string>
+    <string name="location_allcaps" translatable="false">LOCATION</string>
+    <string name="full_name_space" translatable="false">"Dhairya Pal "</string>
+    <string name="permission_denied" translatable="false">Permission denied</string>
+    <string name="dismiss" translatable="false">DISMISS</string>
+    <string name="latitude_f_longitude_f" translatable="false">Latitude: %f, Longitude: %f</string>
+    <string name="packagee" translatable="false">package</string>
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>
