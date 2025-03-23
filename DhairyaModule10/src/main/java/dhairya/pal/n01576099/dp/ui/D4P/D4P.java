@@ -6,6 +6,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationRequest;
+import android.media.AudioAttributes;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import androidx.core.app.NotificationChannelCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
+import androidx.media.AudioAttributesCompat;
 
 import android.provider.Settings;
 import android.view.LayoutInflater;
@@ -43,6 +45,7 @@ public class D4P extends Fragment {
     private ActivityResultLauncher<String> notificationPermissionLauncher;
     private NotificationManagerCompat manager;
     private NotificationCompat.Builder builder;
+    private Uri soundUri;
     private int counter;
     private double latitude;
     private double longitude;
@@ -77,9 +80,12 @@ public class D4P extends Fragment {
         });
 
         //Setting up notification manager and channel
+        soundUri = Uri.parse("android:resource://" + getContext().getPackageName() + "/" + R.raw.nt_notificationsound);
         NotificationChannelCompat channel = new NotificationChannelCompat.Builder(getString(R.string.my_channel_id), NotificationManagerCompat.IMPORTANCE_DEFAULT)
                 .setName(getString(R.string.location_updates))
                 .setDescription(getString(R.string.notifications_for_location_updates))
+                .setVibrationEnabled(true)
+                .setSound(soundUri, new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_NOTIFICATION).setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION).build())
                 .build();
         manager = NotificationManagerCompat.from(getContext());
         manager.createNotificationChannel(channel);
@@ -129,7 +135,8 @@ public class D4P extends Fragment {
                         .setSmallIcon(R.drawable.app_logo)
                         .setContentTitle(getString(R.string.dhairya_pal_location_determined))
                         .setContentText(String.format(getString(R.string.latitude_f_longitude_f), latitude, longitude))
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                        .setSound(soundUri);
                 manager.notify(1, builder.build());
             }
         }
