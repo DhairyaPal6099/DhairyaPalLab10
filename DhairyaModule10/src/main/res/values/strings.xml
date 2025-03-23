@@ -49,6 +49,7 @@
     <string name="text_html" translatable="false">text/html</string>
     <string name="utf_8" translatable="false">UTF-8</string>
     <string name="location_allcaps">LOCATION</string>
+    <string name="full_name_space">"Dhairya Pal "</string>
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>
