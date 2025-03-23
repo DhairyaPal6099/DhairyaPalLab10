@@ -31,7 +31,7 @@ public class PalActivity10 extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.dha_navigation_dh1airya, R.id.dha_navigation_pa2l, R.id.dha_navigation_n013576099, R.id.dha_navigation_d4p)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        NavController navController = Navigation.findNavController(this, R.id.dha_nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.dhaNavView, navController);
     }
