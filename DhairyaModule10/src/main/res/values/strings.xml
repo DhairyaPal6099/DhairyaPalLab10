@@ -48,6 +48,7 @@
     <string name="html_body_part4" translatable="false"><![CDATA[</body></html>]]></string>
     <string name="text_html" translatable="false">text/html</string>
     <string name="utf_8" translatable="false">UTF-8</string>
+    <string name="location_allcaps">LOCATION</string>
     <string-array name="spinner_items">
         <item>Salamander</item>
         <item>Komodo Dragon</item>
