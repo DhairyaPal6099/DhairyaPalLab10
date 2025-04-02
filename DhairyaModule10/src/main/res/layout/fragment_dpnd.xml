@@ -12,38 +12,43 @@
         android:textColor="@color/red"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:textStyle="italic|bold" />
 
     <EditText
+        android:id="@+id/dhaCourseNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="130dp"
         android:hint="Enter course name" />
 
     <EditText
+        android:id="@+id/dhaCourseDescriptionEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="175dp"
+        android:digits="@string/all_characters_but_numbers"
         android:hint="Enter course description" />
 
     <Button
+        android:id="@+id/dhaAddButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="225dp"
         android:layout_marginStart="60dp"
         android:text="Add" />
 
     <Button
+        android:id="@+id/dhaDeleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="225dp"
         android:layout_marginStart="290dp"
         android:text="Delete" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="230dp" />
+        android:layout_marginTop="300dp" />
 
 </FrameLayout>
