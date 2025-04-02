@@ -96,4 +96,6 @@
         <item>How to hit a high ball in Volleyball</item>
         <item>The best and worst Glute exercises</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
