@@ -21,4 +21,8 @@
         android:icon="@drawable/ic_d4p_icon"
         android:title="@string/title_d4p" />
 
+    <item
+        android:id="@+id/dha_navigation_dpnd"
+        android:icon="@drawable/ic_dpnd_icon"
+        android:title="@string/title_dpnd" />
 </menu>

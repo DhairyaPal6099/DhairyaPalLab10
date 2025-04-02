@@ -28,4 +28,10 @@
         android:name="dhairya.pal.n01576099.dp.ui.D4P.D4P"
         android:label="@string/title_d4p"
         tools:layout="@layout/fragment_d4p" />
+
+    <fragment
+        android:id="@+id/dha_navigation_dpnd"
+        android:name="dhairya.pal.n01576099.dp.ui.DPND.DPND"
+        android:label="@string/title_dpnd"
+        tools:layout="@layout/fragment_dpnd" />
 </navigation>

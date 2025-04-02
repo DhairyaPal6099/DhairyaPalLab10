@@ -29,7 +29,7 @@ public class PalActivity10 extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.dha_navigation_dh1airya, R.id.dha_navigation_pa2l, R.id.dha_navigation_n013576099, R.id.dha_navigation_d4p)
+                R.id.dha_navigation_dh1airya, R.id.dha_navigation_pa2l, R.id.dha_navigation_n013576099, R.id.dha_navigation_d4p, R.id.dha_navigation_dpnd)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.dha_nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
