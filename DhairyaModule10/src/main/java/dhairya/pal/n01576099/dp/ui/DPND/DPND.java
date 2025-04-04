@@ -11,7 +11,11 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import dhairya.pal.n01576099.dp.R;
 import dhairya.pal.n01576099.dp.databinding.FragmentDpndBinding;
@@ -31,7 +35,9 @@ public class DPND extends Fragment {
 
         EditText courseNameEditText = binding.dhaCourseNameEditText;
         EditText courseDescriptionEditText = binding.dhaCourseDescriptionEditText;
+        Button addButton = binding.dhaAddButton;
 
+        //Changing lowercase input from course name edit text to uppercase
         courseNameEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -48,6 +54,19 @@ public class DPND extends Fragment {
                     courseNameEditText.setText(uppercaseEditable);
                     courseNameEditText.setSelection(uppercaseEditable.length());
                 }
+            }
+        });
+
+        addButton.setOnClickListener(view -> {
+            if (courseNameEditText.getText().toString().isEmpty()) {
+                courseNameEditText.setError(getString(R.string.empty_not_allowed));
+            }
+            if (courseDescriptionEditText.getText().toString().isEmpty()) {
+                courseDescriptionEditText.setError(getString(R.string.empty_not_allowed));
+            }
+            Pattern pattern = Pattern.compile("^[A-Z]{4}-\\d{3,4}$");
+            if (!pattern.matcher(courseNameEditText.getText().toString()).matches()) {
+                courseNameEditText.setError(getString(R.string.invalid_input));
             }
         });
 

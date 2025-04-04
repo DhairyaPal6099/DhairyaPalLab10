@@ -100,4 +100,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_dpnd">DPND</string>
     <string name="all_characters_but_numbers"><![CDATA[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !@#$%^&*()_+-=[]{}|;:\',.<>?/\\]]></string>
+    <string name="empty_not_allowed">Empty not allowed</string>
+    <string name="invalid_input">Invalid input</string>
 </resources>
