@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.Firebase;
 import com.google.firebase.database.DataSnapshot;
@@ -38,8 +39,8 @@ public class DPND extends Fragment {
     private RecyclerView courseRV;
     private CourseAdapterRV adapter;
     private ArrayList<CourseItemRV> courseItemRVArrayList;
-    DatabaseReference myRef;
-    FirebaseDatabase database;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("coursesInDatabase");
 
     public DPND() {
         // Required empty public constructor
@@ -55,6 +56,7 @@ public class DPND extends Fragment {
         EditText courseNameEditText = binding.dhaCourseNameEditText;
         EditText courseDescriptionEditText = binding.dhaCourseDescriptionEditText;
         Button addButton = binding.dhaAddButton;
+        Button deleteButton = binding.dhaDeleteButton;
 
         loadData();
         buildRecyclerView();
@@ -79,6 +81,24 @@ public class DPND extends Fragment {
             }
         });
 
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                courseItemRVArrayList.clear();
+                for (DataSnapshot itemSnapshot : snapshot.getChildren()) {
+                    CourseItemRV course = itemSnapshot.getValue(CourseItemRV.class);
+                    if (course != null) {
+                        courseItemRVArrayList.add(course);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         addButton.setOnClickListener(view -> {
             Pattern pattern = Pattern.compile("^[A-Z]{4}-\\d{3,4}$");
             if (courseNameEditText.getText().toString().isEmpty()) {
@@ -99,6 +119,16 @@ public class DPND extends Fragment {
             }
         });
 
+        deleteButton.setOnClickListener(view -> {
+            if (courseItemRVArrayList.isEmpty()) {
+                Toast.makeText(getContext(), getString(R.string.no_data_to_delete), Toast.LENGTH_SHORT).show();
+            } else {
+                courseItemRVArrayList.clear();
+                buildRecyclerView();
+                myRef.removeValue();
+            }
+        });
+
         return root;
     }
 
@@ -111,9 +141,6 @@ public class DPND extends Fragment {
     }
 
     private void loadData() {
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("coursesInDatabase");
-
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -138,8 +165,6 @@ public class DPND extends Fragment {
     }
 
     private void saveData() {
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("coursesInDatabase");
         myRef.setValue(courseItemRVArrayList);
     }
 }
