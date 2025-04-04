@@ -102,4 +102,6 @@
     <string name="all_characters_but_numbers"><![CDATA[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !@#$%^&*()_+-=[]{}|;:\',.<>?/\\]]></string>
     <string name="empty_not_allowed">Empty not allowed</string>
     <string name="invalid_input">Invalid input</string>
+    <string name="course_name">Course Name</string>
+    <string name="course_description">Course Description</string>
 </resources>

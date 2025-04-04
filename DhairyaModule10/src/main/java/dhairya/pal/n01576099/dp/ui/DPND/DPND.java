@@ -64,10 +64,13 @@ public class DPND extends Fragment {
             if (courseDescriptionEditText.getText().toString().isEmpty()) {
                 courseDescriptionEditText.setError(getString(R.string.empty_not_allowed));
             }
+
             Pattern pattern = Pattern.compile("^[A-Z]{4}-\\d{3,4}$");
             if (!pattern.matcher(courseNameEditText.getText().toString()).matches()) {
                 courseNameEditText.setError(getString(R.string.invalid_input));
             }
+
+
         });
 
         return root;
