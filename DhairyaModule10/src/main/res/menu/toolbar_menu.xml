@@ -5,5 +5,5 @@
         android:id="@+id/dhaContacts"
         android:icon="@drawable/wrench"
         android:title="Contacts"
-        app:showAsAction="always|withText" />
+        app:showAsAction="withText|always" />
 </menu>

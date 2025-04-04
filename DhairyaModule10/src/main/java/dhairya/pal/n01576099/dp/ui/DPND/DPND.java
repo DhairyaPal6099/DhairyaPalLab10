@@ -57,6 +57,7 @@ public class DPND extends Fragment {
         EditText courseDescriptionEditText = binding.dhaCourseDescriptionEditText;
         Button addButton = binding.dhaAddButton;
         Button deleteButton = binding.dhaDeleteButton;
+        courseItemRVArrayList = new ArrayList<>();
 
         loadData();
         buildRecyclerView();
